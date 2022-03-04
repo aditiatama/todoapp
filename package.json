@@ -2,9 +2,11 @@
   "name": "todo-app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "NODE_ENV=development nodemon bin/www",
+    "start": "node bin/www",
+    "test": "NODE_ENV=test npx jest --detectOpenHandles"  
   },
   "keywords": [],
   "author": "",
@@ -17,5 +19,10 @@
     "pg": "^8.7.3",
     "sequelize": "^6.16.2",
     "sequelize-cli": "^6.4.1"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.2"
   }
 }
