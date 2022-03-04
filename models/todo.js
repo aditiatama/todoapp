@@ -52,7 +52,7 @@ module.exports = (sequelize, DataTypes) => {
         notEmpty: {
           msg: `Due date can't be empty`
         },
-        // isAfter: new Date(),
+        isAfter: new Date().toLocaleDateString(),
       }
     },
   }, {

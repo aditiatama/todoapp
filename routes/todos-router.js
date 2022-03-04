@@ -6,7 +6,7 @@ const router = require('express').Router();
 router.get('/', TodosController.findAll);
 
 // GET /todos/:id
-router.get('/:id', TodosController.findById);
+router.get('/:id', authorizationMiddleware, TodosController.findById);
 
 // POST /todos
 router.post('/', TodosController.insert);
@@ -15,6 +15,6 @@ router.post('/', TodosController.insert);
 router.delete('/:id', authorizationMiddleware, TodosController.delete);
 
 // PUT /todos/:id
-router.put('/:id', TodosController.update);
+router.put('/:id', authorizationMiddleware, TodosController.update);
 
 module.exports = router;
