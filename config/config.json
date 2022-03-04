@@ -13,6 +13,14 @@
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
+  "citest": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "todo-app-test",
+    "host": "localhost",
+    "dialect": "postgres",
+    "logging": false
+  },
   "production": {
     "username": "root",
     "password": null,
